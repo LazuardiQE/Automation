@@ -74,7 +74,7 @@ public class CheckOutPage {
     @FindBy(xpath = "//div[@class='summary_info_label summary_total_label']")
     private WebElement summaryTotal;
 
-    public boolean verifySummaryTotal(){return summaryTotal.isDisplayed();
+    public String verifySummaryTotal(){return summaryTotal.getText();
     }
 
     @FindBy(xpath = "//button[@id='finish']")
