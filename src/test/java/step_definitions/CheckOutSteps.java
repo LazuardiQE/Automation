@@ -68,7 +68,9 @@ public class CheckOutSteps {
     }
 
     @And("user can see the summary total")
-    public void userCanSeeTheSummaryTotal() {
-        Assert.assertTrue(checkoutPage.verifySummaryTotal());
+    public void userCanSeeSummaryTotal() {
+        String expected = "Total: $8.63";
+        String actual = checkoutPage.verifySummaryTotal();
+        Assert.assertEquals(expected, actual);
     }
 }
